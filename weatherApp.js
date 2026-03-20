@@ -17,7 +17,7 @@ confirmBtn.addEventListener("click",function(){
     .then(data => {
         console.log(data);
         
-    const temp = data.main.temp;
+    const temp = Math.round(data.main.temp);
     const weather = data.weather[0].description; 
      const resultTxt = document.getElementById("resultTxt");
     resultTxt.innerText = `It is currently ${temp}°C and ${weather}`;
